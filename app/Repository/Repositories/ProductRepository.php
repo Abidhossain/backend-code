@@ -28,6 +28,7 @@ class ProductRepository implements ProductInterface
             ->when(request()->get('short_by'), function (Builder $builder) {
                 $builder->orderBy('price', request()->get('short_by'));
             })
+            ->with('category:id,name')
             ->get();
     }
 
