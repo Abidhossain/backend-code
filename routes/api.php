@@ -29,7 +29,6 @@ Route::group(['prefix' => 'auth'], function () {
     Route::group(['middleware' => 'auth:sanctum'], function() {
         Route::get('logout', [AuthController::class, 'logout']);
 
-        //category route
         Route::apiResource('category', CategoryController::class);
         Route::apiResource('product', ProductController::class);
 
