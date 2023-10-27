@@ -83,7 +83,7 @@ class ProductRepository implements ProductInterface
 
     public function delete($id)
     {
-        $product = $this->model->where('id',$id)->first(); 
+        $product = $this->model->where('id',$id)->first();
         $product->delete();
         return $this;
     }
